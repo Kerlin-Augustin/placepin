@@ -56,26 +56,26 @@ function App() {
           <div className="hero-visual">
             <div className="sphere-container">
               <img className="sphere" src='/housing.jpg' alt='city' />
-              <div className="ui-element percentage">%</div>
-              <div className="ui-element background">
+              {/* <div className="ui-element percentage">%</div> */}
+              {/* <div className="ui-element background">
                 <span>Background</span>
                 <div className="color-swatches">
                   <div className="swatch purple"></div>
                   <div className="swatch red"></div>
                 </div>
                 <div className="slider"></div>
-              </div>
+              </div> */}
               <div className="ui-element theme">
-                <span>👤</span>
-                <span>Change the theme to purple #A210</span>
+                <span>🏙️</span>
+                <span>Elevate Your Living</span>
               </div>
-              <div className="ui-element generating">
+              {/* <div className="ui-element generating">
                 <span>✨</span>
                 <span>Generating Homepage</span>
-              </div>
+              </div> */}
               <div className="ui-element changing">
-                <span>✨</span>
-                <span>Changing color now</span>
+                <span>🔑</span>
+                <span>The Future of Renting</span>
               </div>
             </div>
           </div>
