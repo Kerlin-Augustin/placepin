@@ -100,8 +100,8 @@ function App() {
       <section className="launch-section">
         <div className="container">
           <div className="launch-content">
-            <h2>Launch in Minutes - Not Weeks.</h2>
-            <p>Get your SaaS site live with zero friction. This template is designed for speed and simplicity, so you can focus on your product - not your website.</p>
+            <h2>Services Tenants Love, Tools Landlords Trust</h2>
+            <p>Our platform connects tenants with curated perks and services while giving landlords powerful tools to manage their properties effortlessly. Everyone wins.</p>
           </div>
           <div className="feature-cards">
             <div className="feature-card">
@@ -111,8 +111,8 @@ function App() {
                   <div className="content-block">You</div>
                 </div>
               </div>
-              <h3>Remix The Template</h3>
-              <p>Choose the layout that fits your vision and make it yours in a click.</p>
+              <h3>Tenant Perks</h3>
+              <p>Laundry, housekeeping, gym access, and exclusive discounts—your home just got an upgrade.</p>
             </div>
             <div className="feature-card">
               <div className="feature-visual">
@@ -123,8 +123,8 @@ function App() {
                   <div className="centered-element"></div>
                 </div>
               </div>
-              <h3>Customize Instantly</h3>
-              <p>Add your content, adjust styles, and tweak components.</p>
+              <h3>Landlord Tools</h3>
+              <p>Property tools, rent collection, and tenant communication all in one place for landlords.</p>
             </div>
             <div className="feature-card">
               <div className="feature-visual">
@@ -133,8 +133,8 @@ function App() {
                   <div className="cursor">👆</div>
                 </div>
               </div>
-              <h3>Go Live</h3>
-              <p>Publish with one click and start sharing your site with the world.</p>
+              <h3>Flexible Plans</h3>
+              <p>Comfort, Premium, Luxury, and Luxury Plus—tenants choose the plan that fits their lifestyle.</p>
             </div>
           </div>
         </div>
