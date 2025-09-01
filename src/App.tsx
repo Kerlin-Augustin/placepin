@@ -104,9 +104,9 @@ function App() {
           </div>
           <div className="pricing-cards">
             <div className="pricing-card">
-              <div className="plan-label">STARTUP</div>
-              <h3>Free</h3>
-              <div className="price">$0<span>/user/month</span></div>
+              <div className="plan-label">COMFORT</div>
+              <h3>Essential</h3>
+              <div className="price">$50<span>month</span></div>
               <button className="secondary-button">Get Started &gt;</button>
               <div className="features">
                 <h4>For individuals</h4>
@@ -120,9 +120,9 @@ function App() {
             </div>
             <div className="pricing-card popular">
               <div className="popular-badge">MOST POPULAR</div>
-              <div className="plan-label">COMMERCIAL</div>
-              <h3>Premium</h3>
-              <div className="price">$45<span>/user/month</span></div>
+              <div className="plan-label">PREMIUM</div>
+              <h3>Balanced</h3>
+              <div className="price">$120<span>month</span></div>
               <button className="primary-button">Get Started &gt;</button>
               <div className="features">
                 <h4>Best for small teams</h4>
@@ -136,9 +136,9 @@ function App() {
               </div>
             </div>
             <div className="pricing-card">
-              <div className="plan-label">ENTERPRISE</div>
+              <div className="plan-label">LUXURY</div>
               <h3>Platinum</h3>
-              <div className="price">$75<span>/user/month</span></div>
+              <div className="price">$200<span>month</span></div>
               <button className="secondary-button">Get Started &gt;</button>
               <div className="features">
                 <h4>Designed for companies</h4>
