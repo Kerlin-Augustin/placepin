@@ -30,7 +30,7 @@ function App() {
             <a href="#pricing">Pricing</a>
             {/* <a href="#blog">Blog</a> */}
           </nav>
-          <button className="cta-button">Get Started &gt;</button>
+          <button className="cta-button">Get Started</button>
         </div>
       </header>
 
@@ -38,10 +38,10 @@ function App() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1>Design Smarter Build Faster.</h1>
-            <p>AI-powered, high-converting site templates for fast-moving founders.</p>
+            <h1>Better Living. Better Management.</h1>
+            <p>Smart services for tenants. Smarter solutions for landlords.</p>
             <div className="hero-buttons">
-              <button className="primary-button">Get Started &gt;</button>
+              <button className="primary-button">Get Started</button>
               <button className="secondary-button">See in Action</button>
             </div>
             <div className="social-proof">
@@ -55,7 +55,7 @@ function App() {
           </div>
           <div className="hero-visual">
             <div className="sphere-container">
-              <div className="sphere"></div>
+              <img className="sphere" src='/housing.jpg' alt='city' />
               <div className="ui-element percentage">%</div>
               <div className="ui-element background">
                 <span>Background</span>
@@ -83,7 +83,7 @@ function App() {
       </section>
 
       {/* Figma File Section */}
-      <section className="figma-section">
+      {/* <section className="figma-section">
         <div className="container">
           <button className="figma-button">
             <span>🎨</span>
@@ -94,7 +94,7 @@ function App() {
             <a href="#" className="more-templates">More Templates</a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Launch in Minutes Section */}
       <section className="launch-section">
@@ -530,7 +530,7 @@ function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-brand">
-            <div className="footer-logo">⭐ Kavi</div>
+            <div className="footer-logo">⭐ PlacePin</div>
           </div>
           <div className="footer-links">
             <div className="footer-column">
