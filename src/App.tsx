@@ -14,7 +14,6 @@ function App() {
           <nav className="nav">
             <a href="#how-it-works">How it Works</a>
             <a href="#features">Features</a>
-            <a href="#use-cases">Use Cases</a>
             <a href="#pricing">Pricing</a>
             {/* <a href="#blog">Blog</a> */}
           </nav>
@@ -52,6 +51,56 @@ function App() {
                 <span>🔑</span>
                 <span>The Future of Renting</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="how-it-works-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>How It Works</h2>
+            <p>Simple steps to get started — whether you're a tenant or a landlord.</p>
+          </div>
+
+          {/* Tenant Steps */}
+          <h3>For Tenants</h3>
+          <div className="steps-cards">
+            <div className="step-card">
+              <div className="icon">🔍</div>
+              <h4>Find Your Home</h4>
+              <p>Search available listings and discover apartments with the perks you want.</p>
+            </div>
+            <div className="step-card">
+              <div className="icon">📝</div>
+              <h4>Apply Securely</h4>
+              <p>Submit applications and sign leases online with ease and confidence.</p>
+            </div>
+            <div className="step-card">
+              <div className="icon">💳</div>
+              <h4>Pay & Enjoy</h4>
+              <p>Pay rent, track expenses, and enjoy exclusive perks directly through our platform.</p>
+            </div>
+          </div>
+
+          {/* Landlord Steps */}
+          <h3>For Landlords</h3>
+          <div className="steps-cards">
+            <div className="step-card">
+              <div className="icon">🏢</div>
+              <h4>List Your Property</h4>
+              <p>Add your building and units to the platform in minutes.</p>
+            </div>
+            <div className="step-card">
+              <div className="icon">📊</div>
+              <h4>Track & Manage</h4>
+              <p>Monitor rent collection, tenant activity, and building performance all in one place.</p>
+            </div>
+            <div className="step-card">
+              <div className="icon">🤝</div>
+              <h4>Engage Tenants</h4>
+              <p>Offer perks and services that boost tenant satisfaction and retention.</p>
             </div>
           </div>
         </div>
@@ -112,7 +161,7 @@ function App() {
                 <h4>For property owners</h4>
                 <ul>
                   <li>✓ Transparent fee based on your building’s expected gross rental income</li>
-                  <li>✓ Not a traditional management service (unless 10+ units)</li>
+                  <li>✓ Tailored for landlords with scalable services, and full management support for 10+ units.</li>
                   <li>✓ Access to tenant perks across all your units</li>
                   <li>✓ Tools to streamline rent tracking and communications</li>
                   <li>✓ Scales with property size — more units, more value</li>
@@ -175,7 +224,7 @@ function App() {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <p>Need more free templates like this? Submit your email and we'll let you know.</p>
+            <p>Stay in the loop. Enter your email and be the first to know when new features roll out.</p>
           </div>
           <div className="cta-form">
             <p>Just send us your contact email and we will contact you.</p>
@@ -193,29 +242,32 @@ function App() {
           <div className="footer-brand">
             <div className='logo'>
               <div className="logo-icon">◆</div>
-              <span className="footer-logo"> PlacePin</span>
+              <span className="footer-logo">PlacePin</span>
             </div>
+            <p className="footer-slogan">Smart services for tenants. Smarter solutions for landlords.</p>
           </div>
+
           <div className="footer-links">
             <div className="footer-column">
-              <h4>INFORMATION</h4>
+              <h4>Explore</h4>
               <a href="#how-it-works">How it Works</a>
               <a href="#features">Features</a>
-              <a href="#use-cases">Use Cases</a>
               <a href="#pricing">Pricing</a>
-              <a href="#blog">Blog</a>
+              <a href="#contact">Contact</a>
             </div>
             <div className="footer-column">
-              <h4>MORE TEMPLATES</h4>
-              <a href="#">NajmAl</a>
-              <a href="#">Revo</a>
-              <a href="#">Bayt</a>
-              <a href="#">Sawad</a>
-              <a href="#">Get Template</a>
+              <h4>Legal</h4>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
             </div>
           </div>
+
           <div className="footer-cta">
             <button className="primary-button">Get Started →</button>
+          </div>
+
+          <div className="footer-bottom">
+            <p>© 2025 PlacePin. All rights reserved.</p>
           </div>
         </div>
       </footer>
