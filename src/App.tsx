@@ -9,7 +9,7 @@ function App() {
         <div className="container">
           <div className="logo">
             <div className="logo-icon">◆</div>
-            <span>PlacePin</span>
+            <a href='#' className="footer-logo">PlacePin</a>
           </div>
           <nav className="nav">
             <a href="#how-it-works">How it Works</a>

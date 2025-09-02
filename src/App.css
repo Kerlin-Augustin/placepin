@@ -198,6 +198,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .step-card {
