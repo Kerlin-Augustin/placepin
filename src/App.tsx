@@ -15,7 +15,6 @@ function App() {
             <a href="#how-it-works">How it Works</a>
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
-            {/* <a href="#blog">Blog</a> */}
           </nav>
           <button className="cta-button">Get Started</button>
         </div>
@@ -57,7 +56,7 @@ function App() {
       </section>
 
       {/* How it works */}
-      <section className="how-it-works-section">
+      <section className="how-it-works-section" id="how-it-works">
         <div className="container">
           <div className="section-header">
             <h2>How It Works</h2>
@@ -107,7 +106,7 @@ function App() {
       </section>
 
       {/* Tools tenants love Section */}
-      <section className="launch-section">
+      <section className="launch-section" id="features">
         <div className="container">
           <div className="launch-content">
             <h2>Services Tenants Love, Tools Landlords Trust</h2>
@@ -145,7 +144,7 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section className="pricing-section">
+      <section className="pricing-section" id="pricing">
         <div className="container">
           <div className="section-header">
             <h2>Affordable Plans For Everyone.</h2>
@@ -242,7 +241,7 @@ function App() {
           <div className="footer-brand">
             <div className='logo'>
               <div className="logo-icon">◆</div>
-              <span className="footer-logo">PlacePin</span>
+              <a href='#' className="footer-logo">PlacePin</a>
             </div>
             <p className="footer-slogan">Smart services for tenants. Smarter solutions for landlords.</p>
           </div>
