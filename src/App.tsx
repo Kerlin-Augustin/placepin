@@ -102,6 +102,24 @@ function App() {
             <h2>Affordable Plans For Everyone.</h2>
             <p>Get the features you need without breaking the bank. Our flexible plans fit teams of all sizes, helping you start strong and scale effortlessly with clear, transparent pricing.</p>
           </div>
+          <div className="pricing-cards single-card">
+            <div className="pricing-card landlord-card">
+              <div className="plan-label">LANDLORDS</div>
+              <h3>Building Plan</h3>
+              <div className="price">2.5%<span> of monthly building rent</span></div>
+              <button className="primary-button">Start Managing &gt;</button>
+              <div className="features landlord-features">
+                <h4>For property owners</h4>
+                <ul>
+                  <li>✓ Transparent fee based on your building’s expected gross rental income</li>
+                  <li>✓ Not a traditional management service (unless 10+ units)</li>
+                  <li>✓ Access to tenant perks across all your units</li>
+                  <li>✓ Tools to streamline rent tracking and communications</li>
+                  <li>✓ Scales with property size — more units, more value</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div className="pricing-cards">
             <div className="pricing-card">
               <div className="plan-label">COMFORT</div>
@@ -109,12 +127,12 @@ function App() {
               <div className="price">$50<span>month</span></div>
               <button className="secondary-button">Get Started &gt;</button>
               <div className="features">
-                <h4>For individuals</h4>
+                <h4>Perfect for individuals</h4>
                 <ul>
-                  <li>✓ Access to core features</li>
-                  <li>✓ Up to users included</li>
-                  <li>✓ 10GB cloud storage</li>
-                  <li>✓ Standard email support</li>
+                  <li>✓ Laundry service (basic)</li>
+                  <li>✓ Limited housekeeping visits</li>
+                  <li>✓ Discounts on food & groceries</li>
+                  <li>✓ Access to partner gyms</li>
                 </ul>
               </div>
             </div>
@@ -125,13 +143,12 @@ function App() {
               <div className="price">$120<span>month</span></div>
               <button className="primary-button">Get Started &gt;</button>
               <div className="features">
-                <h4>Best for small teams</h4>
+                <h4>Great for small households</h4>
                 <ul>
-                  <li>✓ Everything in free</li>
-                  <li>✓ Up to 50 users</li>
-                  <li>✓ 100GB cloud storage</li>
-                  <li>✓ Priority support with chat</li>
-                  <li>✓ Access to advanced integrations</li>
+                  <li>✓ Everything in Comfort</li>
+                  <li>✓ More frequent laundry</li>
+                  <li>✓ Higher partner discounts</li>
+                  <li>✓ Early access to new perks</li>
                 </ul>
               </div>
             </div>
@@ -141,12 +158,12 @@ function App() {
               <div className="price">$200<span>month</span></div>
               <button className="secondary-button">Get Started &gt;</button>
               <div className="features">
-                <h4>Designed for companies</h4>
+                <h4>Made for premium living</h4>
                 <ul>
-                  <li>✓ Everything in premium</li>
-                  <li>✓ Unlimited users</li>
-                  <li>✓ Customizable storage options</li>
-                  <li>✓ Dedicated account manager</li>
+                  <li>✓ Everything in Premium</li>
+                  <li>✓ Concierge services</li>
+                  <li>✓ Priority scheduling</li>
+                  <li>✓ VIP experiences & events</li>
                 </ul>
               </div>
             </div>
