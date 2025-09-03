@@ -1,4 +1,5 @@
 import './landingPage.css'
+import { NavLink } from 'react-router-dom'
 
 const LandingPage = () => {
 
@@ -16,7 +17,9 @@ const LandingPage = () => {
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
           </nav>
-          <button className="cta-button">Get Started</button>
+          <NavLink to='/signup'>
+            <button className="cta-button">Get Started</button>
+          </NavLink>
         </div>
       </header>
 
@@ -27,8 +30,10 @@ const LandingPage = () => {
             <h1>Better Living. Better Management.</h1>
             <p>Smart services for tenants. Smarter solutions for landlords.</p>
             <div className="hero-buttons">
-              <button className="primary-button">Get Started</button>
-              <button className="secondary-button">See in Action</button>
+              <NavLink to='/signup'>
+                <button className="primary-button">Get Started</button>
+              </NavLink>
+              <a href="#features"><button className="secondary-button">Learn More</button></a>
             </div>
             {/* <div className="social-proof">
               <div className="avatars">
@@ -154,7 +159,7 @@ const LandingPage = () => {
             <div className="pricing-card landlord-card">
               <div className="plan-label">LANDLORDS</div>
               <h3>Building Plan</h3>
-              <div className="price">2.5%<span> of monthly building rent</span></div>
+              <div className="price">~2.5%<span> of monthly building rent</span></div>
               <button className="primary-button">Start Managing &gt;</button>
               <div className="features landlord-features">
                 <h4>For property owners</h4>
@@ -262,7 +267,9 @@ const LandingPage = () => {
           </div>
 
           <div className="footer-cta">
-            <button className="primary-button">Get Started →</button>
+            <NavLink to='/signup'>
+              <button className="primary-button">Get Started →</button>
+            </NavLink>
           </div>
 
           <div className="footer-bottom">
