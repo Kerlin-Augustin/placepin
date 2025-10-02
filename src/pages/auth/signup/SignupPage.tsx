@@ -49,7 +49,7 @@ const SignupPage = () => {
     <div>
       <section className='primarySection'>
         <NavLink to='/' className='nav-link'>
-          <div className='logo'>
+          <div className='signup-logo'>
             PlacePin
           </div>
         </NavLink>

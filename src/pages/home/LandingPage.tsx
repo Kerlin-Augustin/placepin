@@ -175,7 +175,7 @@ const LandingPage = () => {
           </div>
           <div className="pricing-cards">
             <div className="pricing-card">
-              <div className="plan-label">COMFORT</div>
+              <div className="plan-label">TENANTS</div>
               <h3>Essential</h3>
               <div className="price">$50<span>month</span></div>
               <button className="secondary-button">Get Started &gt;</button>
@@ -191,7 +191,7 @@ const LandingPage = () => {
             </div>
             <div className="pricing-card popular">
               <div className="popular-badge">MOST POPULAR</div>
-              <div className="plan-label">PREMIUM</div>
+              <div className="plan-label">TENANTS</div>
               <h3>Balanced</h3>
               <div className="price">$120<span>month</span></div>
               <button className="primary-button">Get Started &gt;</button>
@@ -206,7 +206,7 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="pricing-card">
-              <div className="plan-label">LUXURY</div>
+              <div className="plan-label">TENANTS</div>
               <h3>Platinum</h3>
               <div className="price">$200<span>month</span></div>
               <button className="secondary-button">Get Started &gt;</button>
