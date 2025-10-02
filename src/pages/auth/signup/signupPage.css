@@ -1,41 +1,41 @@
-.primarySection{
+.primarySection {
   padding: 3em 6em;
   background: linear-gradient(135deg, #00bfa5 0%, #4dd0e1 100%);
   width: 60%;
   border-radius: 0 0 1em 1em;
 }
 
-.li{
+.li {
   list-style-type: none;
   color: #fff;
   margin: 0 0 2em 0;
 }
 
-.h1{
+.h1 {
   font-family: 'Martian Mono', sans-serif;
   color: #fff;
   font-size: 35px;
   margin: 0 5em 1em 0;
 }
 
-.logo{
+.logo {
   margin: 0 0 2em 0;
   color: #fff;
   font-size: 25px;
 }
 
-.p{
+.p {
   padding: 0 10em 0 0;
   font-family: "PT Serif Caption", serif;
 }
 
-.h4{
+.h4 {
   margin: 0 0 1em 0;
   font-family: "PT Serif Caption", serif;
   font-size: 18px;
 }
 
-.heroForm{
+.heroForm {
   position: absolute;
   top: 10%;
   right: 5%;
@@ -63,7 +63,7 @@
   box-sizing: border-box;
 }
 
-.inputLabel{
+.inputLabel {
   width: 80%;
   font-family: "PT Serif Caption";
   font-size: 0.9em;
@@ -87,6 +87,7 @@
   text-align: center;
 }
 
-.rightSide {
-  background: #f5f0eb;;
+.nav-link {
+  text-decoration: none;
+  color: inherit;
 }

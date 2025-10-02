@@ -1,5 +1,4 @@
 import './signupPage.css';
-// import '../../../defaultNavLink.css'
 import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
