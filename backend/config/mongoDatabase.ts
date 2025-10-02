@@ -11,7 +11,7 @@ const Mongo_URI = process.env.MONGO_URI
 
 // Setup Mongoose
 
-export async function connectDB() {
+export async function connectToDB() {
   try {
     mongoose.set('strictQuery', false);
     await mongoose.connect(Mongo_URI);
