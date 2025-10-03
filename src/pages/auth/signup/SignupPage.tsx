@@ -22,6 +22,11 @@ const SignupPage = () => {
       return
     }
 
+    if(accountType.length === 0){
+      setErrorMessage('Choose an account type')
+      return
+    }
+
     const signupInformation = {
       username,
       email,
@@ -123,8 +128,8 @@ const SignupPage = () => {
             required
           >
             <option value="">Select one</option>
-            <option value="recruiter">Tenant</option>
-            <option value="job_seeker">Landlord</option>
+            <option value="tenant">Tenant</option>
+            <option value="landlord">Landlord</option>
           </select>
           <label
             className='inputLabel'

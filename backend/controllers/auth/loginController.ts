@@ -1,3 +1,5 @@
-export const loginController = async (req, res) => {
-  
+import { Request, Response } from 'express';
+ 
+export const loginController = async (req: Request, res: Response) => {
+
 }
