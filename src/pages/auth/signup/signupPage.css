@@ -91,3 +91,13 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media (min-width: 1360px) {
+  .primarySection {
+    padding: 3em 6em;
+    background: linear-gradient(135deg, #00bfa5 0%, #4dd0e1 100%);
+    width: 60%;
+    border-radius: 0 0 1em 1em;
+    height: 100vh;
+  }
+}
