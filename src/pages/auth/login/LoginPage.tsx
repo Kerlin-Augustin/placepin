@@ -2,12 +2,12 @@ import './loginPage.css'
 import axios from 'axios'
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
-// import { useAuth } from '../../../context/AuthContext'
+import { useAuth } from '../../../context/AuthContext'
 
 const LoginPage = () => {
 
   const navigate = useNavigate()
-  // const { login } = useAuth()
+  const { login } = useAuth()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -28,8 +28,8 @@ const LoginPage = () => {
       )
 
       if (res.status === 200) {
-        // const { accessToken, email, username } = res.data
-        // login(email, accessToken, username)
+        const { accessToken, email, username } = res.data
+        login(email, accessToken, username)
         navigate('/dashboard')
       }
     } catch (err: any) {
