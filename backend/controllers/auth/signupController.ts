@@ -9,6 +9,7 @@ dotenv.config();
 export const signupController = async (req: Request, res: Response) => {
   
   const { email, username, password, accountType } = req.body
+  const JWT_ACCESS_TOKEN = process.env.JWT_ACCESS_TOKEN!
   
   let hashedPassword: string;
   const saltRounds = 10
@@ -32,7 +33,9 @@ export const signupController = async (req: Request, res: Response) => {
 
     await newUser.save()
 
-    res.status(201).json({ message: 'User Created Successfully'})
+    const accessToken = jwt.sign({ email }, JWT_ACCESS_TOKEN, { expiresIn: '30d' })
+
+    res.status(201).json({ message: 'User Created Successfully', accessToken})
   } catch (err) {
     console.error('Failed to create user', err)
     res.status(500).json({error: 'Failed to create new user'})

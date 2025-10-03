@@ -2,11 +2,11 @@ import './signupPage.css';
 import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-// import { useAuth } from '../../../context/AuthContext';
+import { useAuth } from '../../../context/AuthContext';
 
 const SignupPage = () => {
   const navigate = useNavigate()
-  // const { login } = useAuth()
+  const { login } = useAuth()
 
   const [username, setUserName] = useState('')
   const [email, setEmail] = useState('')
@@ -37,8 +37,8 @@ const SignupPage = () => {
     try {
       const res = await axios.post('/api/signup', signupInformation)
       if (res.status === 201) {
-        // const { accessToken } = res.data
-        // login(email, accessToken, username)
+        const { accessToken } = res.data
+        login(email, accessToken, username)
         navigate('/dashboard')
       }
     } catch (err: any) {
@@ -47,8 +47,6 @@ const SignupPage = () => {
     }
 
   }
-
-  // Added local storage so the tokens can persisent when someone refreshes the page
 
   return (
     <div>
