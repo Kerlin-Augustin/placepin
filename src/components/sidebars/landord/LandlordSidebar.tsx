@@ -16,11 +16,11 @@ const LandlordSidebar = () => {
 
   const tabs = [
     <NavLink className="nav-link" to="landlordtenants"><SidebarButton buttonText="Tenants" /></NavLink>,
-    <NavLink className="nav-link" to=""><SidebarButton buttonText="Properties" /></NavLink>,
-    <NavLink className="nav-link" to=""><SidebarButton buttonText="Billing & Payments" /></NavLink>,
-    <NavLink className="nav-link" to=""><SidebarButton buttonText="Perk Adoption" /></NavLink>,
-    <NavLink className="nav-link" to=""><SidebarButton buttonText="Messaging" /></NavLink>,
-    <NavLink className="nav-link" to=""><SidebarButton buttonText="Insights" /></NavLink>,]
+    <NavLink className="nav-link" to="landlordproperties"><SidebarButton buttonText="Properties" /></NavLink>,
+    <NavLink className="nav-link" to="landlordmessaging"><SidebarButton buttonText="Messaging" /></NavLink>,
+    <NavLink className="nav-link" to="landlordtenantinsights"><SidebarButton buttonText="Tenant Insights" /></NavLink>,
+    <NavLink className="nav-link" to="landlordvendors"><SidebarButton buttonText="Vendors" /></NavLink>,
+    <NavLink className="nav-link" to="landlordbillingpayments"><SidebarButton buttonText="Billing & Payments" /></NavLink>,]
 
     const allTabs = tabs.map((tab, index) => {
       return (
