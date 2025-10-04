@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
-import { UserModel } from '../../database/models/User.model';
+import { TenantModel } from '../../database/models/Tenant.model';
+import { LandlordModel } from '../../database/models/Landlord.model';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
@@ -12,10 +13,10 @@ export const loginController = async (req: Request, res: Response) => {
   const JWT_ACCESS_TOKEN = process.env.JWT_ACCESS_TOKEN!
 
   try {
-    const user = await UserModel.findOne({ email })
+    const user = (await TenantModel.findOne({ email })) || (await LandlordModel.findOne({ email }));
 
     if (!user) {
-      res.status(400).json({ message: 'Invalid credentials. Try again.' })
+      res.status(401).json({ message: 'Invalid credentials. Try again.' })
       return
     }
 
