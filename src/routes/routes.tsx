@@ -20,7 +20,7 @@ const routes: RouteObject[] = [
         element: <LandlordDashboard />,
         children: [
           {path: '', element: <LandlordHomepage />},
-          {path: 'tenants', element: <LandlordTenants />},
+          {path: 'landlordtenants', element: <LandlordTenants />},
         ]
       }
     ]

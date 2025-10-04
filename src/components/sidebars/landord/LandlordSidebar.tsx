@@ -15,7 +15,7 @@ const LandlordSidebar = () => {
   }
 
   const tabs = [
-    <NavLink className="nav-link" to=""><SidebarButton buttonText="Tenants" /></NavLink>,
+    <NavLink className="nav-link" to="landlordtenants"><SidebarButton buttonText="Tenants" /></NavLink>,
     <NavLink className="nav-link" to=""><SidebarButton buttonText="Properties" /></NavLink>,
     <NavLink className="nav-link" to=""><SidebarButton buttonText="Billing & Payments" /></NavLink>,
     <NavLink className="nav-link" to=""><SidebarButton buttonText="Perk Adoption" /></NavLink>,
@@ -33,7 +33,9 @@ const LandlordSidebar = () => {
       <aside className="sideBarContainer">
       <div className="logoAndTabs">
         <h2 className="logoText">
+          <NavLink className="nav-link" to="">
           PlacePin
+          </NavLink>
         </h2>
         <div className="tabs">
           {allTabs}
