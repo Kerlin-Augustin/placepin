@@ -9,7 +9,7 @@ dotenv.config();
 
 export const signupController = async (req: Request, res: Response) => {
   
-  const { email, username, address, password, accountType } = req.body
+  const { email, username, address, password, phoneNumber, accountType } = req.body
   const JWT_ACCESS_TOKEN = process.env.JWT_ACCESS_TOKEN!
   
   let hashedPassword: string;
@@ -39,6 +39,7 @@ export const signupController = async (req: Request, res: Response) => {
         address,
         accountType,
         password: hashedPassword,
+        phoneNumber,
       })
     }
 
@@ -49,6 +50,7 @@ export const signupController = async (req: Request, res: Response) => {
         address,
         accountType,
         password: hashedPassword,
+        phoneNumber,
       })
     }
 
