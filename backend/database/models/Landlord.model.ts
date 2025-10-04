@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const landlordSchema = new mongoose.Schema({
   accountType: String,
+  address: String,
   age: Number,
   createdAt: { type: Date, default: Date.now },
   email: { type: String, required: true, unique: true, lowercase: true },

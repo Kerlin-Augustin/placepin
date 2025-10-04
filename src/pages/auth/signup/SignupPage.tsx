@@ -10,7 +10,9 @@ const SignupPage = () => {
 
   const [username, setUserName] = useState('')
   const [email, setEmail] = useState('')
+  const [address, setAddress] = useState('')
   const [password, setPassword] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
   const [accountType, setAccountType] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -30,8 +32,10 @@ const SignupPage = () => {
     const signupInformation = {
       username,
       email,
+      address,
       accountType,
       password,
+      phoneNumber,
     }
 
     try {
@@ -49,7 +53,7 @@ const SignupPage = () => {
   }
 
   return (
-    <div>
+    <div className='top-container'>
       <section className='primarySection'>
         <NavLink to='/' className='nav-link'>
           <div className='signup-logo'>
@@ -82,7 +86,7 @@ const SignupPage = () => {
         </ul>
 
       </section>
-      <div className="rightSide">
+      <div>
         <form onSubmit={handleCreateAccount} className='heroForm'>
           <h4>
             Create your PlacePin account
@@ -98,6 +102,7 @@ const SignupPage = () => {
             className='inputFields'
             onChange={(e) => setUserName(e.target.value.toLowerCase())}
             id='name'
+            placeholder='David Johnson'
             required
           />
           <label
@@ -111,6 +116,7 @@ const SignupPage = () => {
             className='inputFields'
             onChange={(e) => setEmail(e.target.value.toLowerCase().trim())}
             id='email'
+            placeholder="djohnson@gmail.com"
             required
           />
           <label
@@ -131,6 +137,34 @@ const SignupPage = () => {
           </select>
           <label
             className='inputLabel'
+            htmlFor='address'
+          >
+            Address
+          </label>
+          <input
+            type="text"
+            className='inputFields'
+            onChange={(e) => setAddress(e.target.value.toLowerCase().trim())}
+            id='address'
+            placeholder='123 Main Street, Boston MA, 02136'
+            required
+          />
+          <label
+            className='inputLabel'
+            htmlFor='phoneNumber'
+          >
+            Phone Number
+          </label>
+          <input
+            type="number"
+            className='inputFields'
+            onChange={(e) => setPhoneNumber(e.target.value.toLowerCase().trim())}
+            id='phoneNumber'
+            placeholder='617-555-5555'
+            required
+          />
+          <label
+            className='inputLabel'
             htmlFor='password'
           >
             Password
@@ -140,6 +174,7 @@ const SignupPage = () => {
             className='inputFields'
             onChange={(e) => setPassword(e.target.value)}
             id='password'
+            placeholder='********'
             required
           />
           <br />
