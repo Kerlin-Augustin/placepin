@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
-import { UserModel } from '../../database/models/User.model';
+import { TenantModel } from '../../database/models/Tenant.model';
+import { LandlordModel } from '../../database/models/Landlord.model';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
@@ -13,9 +14,16 @@ export const signupController = async (req: Request, res: Response) => {
   
   let hashedPassword: string;
   const saltRounds = 10
+  let isExistingUser: any | null = null;
+  let newUser: any;
 
   try {
-    const isExistingUser = await UserModel.findOne({ email })
+
+    if(accountType === 'tenant'){
+      isExistingUser = await TenantModel.findOne({ email })
+    } else if(accountType === 'landlord'){
+      isExistingUser = await LandlordModel.findOne({ email })
+    }
 
     if (isExistingUser) {
       res.status(400).json({ message: 'Email already in use. Please use a different email address.' })
@@ -24,12 +32,23 @@ export const signupController = async (req: Request, res: Response) => {
 
     hashedPassword = await bcrypt.hash(password, saltRounds)
     
-    let newUser = new UserModel({
-      username,
-      email,
-      accountType,
-      password: hashedPassword,
-    })
+    if(accountType === 'tenant'){
+      newUser = new TenantModel({
+        username,
+        email,
+        accountType,
+        password: hashedPassword,
+      })
+    }
+
+    if(accountType === 'landlord'){
+      newUser = new LandlordModel({
+        username,
+        email,
+        accountType,
+        password: hashedPassword,
+      })
+    }
 
     await newUser.save()
 
