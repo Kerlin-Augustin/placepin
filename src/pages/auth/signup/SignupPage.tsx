@@ -14,6 +14,7 @@ const SignupPage = () => {
   const [password, setPassword] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [accountType, setAccountType] = useState('')
+  const [promo, setPromo] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleCreateAccount = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,7 +25,7 @@ const SignupPage = () => {
       return
     }
 
-    if(accountType.length === 0){
+    if (accountType.length === 0) {
       setErrorMessage('Choose an account type')
       return
     }
@@ -36,6 +37,7 @@ const SignupPage = () => {
       accountType,
       password,
       phoneNumber,
+      promo,
     }
 
     try {
@@ -135,6 +137,19 @@ const SignupPage = () => {
             <option value="tenant">Tenant</option>
             <option value="landlord">Landlord</option>
           </select>
+          {accountType === 'tenant' && <>
+            <label
+              className='inputLabel'
+              htmlFor='landlordPromo'
+            >
+              Landlord Promo Code
+            </label><input
+              type="text"
+              className='inputFields'
+              onChange={(e) => setPromo(e.target.value.toLowerCase().trim())}
+              id='landlordPromo'
+              placeholder='1234-abc-5678' />
+          </>}
           <label
             className='inputLabel'
             htmlFor='address'
