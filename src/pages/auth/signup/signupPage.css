@@ -39,6 +39,7 @@
 .top-container {
   display: flex;
   align-items: stretch;
+  background: #f5f0eb;
 }
 
 .heroForm {

@@ -104,7 +104,7 @@ const SignupPage = () => {
             className='inputFields'
             onChange={(e) => setUserName(e.target.value.toLowerCase())}
             id='name'
-            placeholder='David Johnson'
+            placeholder='Dinah Johnson'
             required
           />
           <label
@@ -143,12 +143,13 @@ const SignupPage = () => {
               htmlFor='landlordPromo'
             >
               Landlord Promo Code
-            </label><input
+            </label>
+            <input
               type="text"
               className='inputFields'
               onChange={(e) => setPromo(e.target.value.toLowerCase().trim())}
               id='landlordPromo'
-              placeholder='1234-abc-5678' />
+              placeholder='1234-abc-5678 (Optional)'  />
           </>}
           <label
             className='inputLabel'
