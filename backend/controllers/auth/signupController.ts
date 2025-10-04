@@ -14,18 +14,14 @@ export const signupController = async (req: Request, res: Response) => {
   
   let hashedPassword: string;
   const saltRounds = 10
-  let isExistingUser: any | null = null;
   let newUser: any;
+  let existingEmail: any;
 
   try {
 
-    if(accountType === 'tenant'){
-      isExistingUser = await TenantModel.findOne({ email })
-    } else if(accountType === 'landlord'){
-      isExistingUser = await LandlordModel.findOne({ email })
-    }
+    existingEmail = await TenantModel.findOne({ email }) || await LandlordModel.findOne({ email })
 
-    if (isExistingUser) {
+    if(existingEmail){
       res.status(400).json({ message: 'Email already in use. Please use a different email address.' })
       return
     }
@@ -59,7 +55,7 @@ export const signupController = async (req: Request, res: Response) => {
 
     const accessToken = jwt.sign({ email }, JWT_ACCESS_TOKEN, { expiresIn: '30d' })
 
-    res.status(201).json({ message: 'User Created Successfully', accessToken})
+    res.status(201).json({ message: 'User Created Successfully', accessToken, accountType})
   } catch (err) {
     console.error('Failed to create user', err)
     res.status(500).json({error: 'Failed to create new user'})

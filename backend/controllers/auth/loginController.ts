@@ -29,7 +29,7 @@ export const loginController = async (req: Request, res: Response) => {
 
     const accessToken = jwt.sign({ email: user.email }, JWT_ACCESS_TOKEN, { expiresIn: '30d' })
 
-    res.status(200).json({ message: 'Success', accessToken, email, username: user.username })
+    res.status(200).json({ message: 'Success', accessToken, email, username: user.username, accountType: user.accountType })
 
   } catch (err) {
     console.log('Could not login', err)

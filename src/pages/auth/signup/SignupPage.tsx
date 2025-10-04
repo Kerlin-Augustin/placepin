@@ -43,9 +43,14 @@ const SignupPage = () => {
     try {
       const res = await axios.post('/api/signup', signupInformation)
       if (res.status === 201) {
-        const { accessToken } = res.data
+        const { accessToken, accountType } = res.data
         login(email, accessToken, username)
-        navigate('/dashboard')
+        if(accountType === 'landlord'){
+          navigate('/landlorddashboard')
+        }
+        if(accountType === 'tenant'){
+          navigate('/tenantdashboard')
+        }
       }
     } catch (err: any) {
       setErrorMessage(err.response.data.message)
