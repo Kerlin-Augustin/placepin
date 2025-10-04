@@ -2,11 +2,11 @@ import type { RouteObject } from "react-router-dom";
 import LandingPage from "../pages/home/LandingPage";
 import SignupPage from "../pages/auth/signup/SignupPage";
 import LoginPage from "../pages/auth/login/LoginPage";
-// import Dashboard from "../pages/dashboard/Dashboard";
 import LandlordDashboard from "../pages/dashboard/landlords/LandlordDashboard";
 import TenantDashboard from "../pages/dashboard/tenants/TenantDashboard";
 import PrivateRoute from "./PrivateRoute";
-import Perks from "../pages/dashboard/perks/Perks";
+import LandlordTenants from "../pages/dashboard/landlords/landlordTenants/LandlordTenants";
+import LandlordHomepage from "../pages/dashboard/landlords/landlordHomepage/LandlordHomepage";
 
 const routes: RouteObject[] = [
   { path: '/', element: <LandingPage /> },
@@ -19,7 +19,8 @@ const routes: RouteObject[] = [
         path: '',
         element: <LandlordDashboard />,
         children: [
-          {path: 'perks', element: <Perks />}
+          {path: '', element: <LandlordHomepage />},
+          {path: 'tenants', element: <LandlordTenants />},
         ]
       }
     ]
@@ -31,7 +32,7 @@ const routes: RouteObject[] = [
         path: '',
         element: <TenantDashboard />,
         children: [
-          {path: 'perks', element: <Perks />}
+          {path: '', element: <LandlordTenants />},
         ]
       }
     ]
