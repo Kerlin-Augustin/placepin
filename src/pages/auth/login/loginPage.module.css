@@ -1,4 +1,4 @@
-.login-heroForm{
+.loginHeroForm{
   position: absolute;
   top: 10%;
   right: 22%;
@@ -53,7 +53,7 @@
   font-weight: bold;
 }
 
-.login-heroForm button {
+.loginHeroForm button {
   width: 80%;
   height: 2.5em;
   background-image: linear-gradient(135deg, #00bfa5 0%, #4dd0e1 100%);;
@@ -63,4 +63,9 @@
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
 }

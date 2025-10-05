@@ -1,4 +1,4 @@
-import './loginPage.css'
+import styles from './loginPage.module.css'
 import axios from 'axios'
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -44,40 +44,40 @@ const LoginPage = () => {
   }
 
   return (
-    <div className='entireContainer'>
-      <form onSubmit={handleLoginUser} className='login-heroForm'>
+    <div className={styles.entireContainer}>
+      <form onSubmit={handleLoginUser} className={styles.loginHeroForm}>
         <h4>
           Login
         </h4>
         <label
-          className='inputLabel'
+          className={styles.inputLabel}
           htmlFor='email'
         >
           Email
         </label>
         <input
           type="text"
-          className='inputFields'
+          className={styles.inputFields}
           onChange={(e) => setEmail(e.target.value.toLowerCase().trim())}
           id='email'
           required
         />
         <label
-          className='inputLabel'
+          className={styles.inputLabel}
           htmlFor='password'
         >
           Password
         </label>
         <input
           type="password"
-          className='inputFields'
+          className={styles.inputFields}
           onChange={(e) => setPassword(e.target.value)}
           id='password'
           required
         />
-        <NavLink className='nav-link' to='/'><p className='forgotPassword'>Forgot Password?</p></NavLink>
+        <NavLink className={styles.navLink} to='/'><p className={styles.forgotPassword}>Forgot Password?</p></NavLink>
         <button>Submit</button>
-        <p className='errorMessage inputLabel'>{errorMessage}</p>
+        <p className={`${styles.errorMessage} ${styles.inputLabel}`}>{errorMessage}</p>
         <p>Don't have an account? <NavLink to='/signup'>Sign up</NavLink></p>
       </form>
     </div>
