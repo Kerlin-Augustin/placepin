@@ -1,14 +1,10 @@
-import { useAuth } from "../../../../context/AuthContext"
+import './landlordHomepage.css';
 
 const LandlordHomepage = () => {
-  
-  const { email } = useAuth()
-
-  console.log(email)
   return (
-    <>
+    <div className="landlordHomepageContainer">
       Landlord Homepage
-    </>
+    </div>
   )
 }
 

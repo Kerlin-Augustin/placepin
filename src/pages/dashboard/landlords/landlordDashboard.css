@@ -1,4 +1,9 @@
 .landlordDashboardContainer {
   display: flex;
-  align-items: center;
+}
+
+.landlordHeaderBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
