@@ -1,39 +1,39 @@
-import './landingPage.css'
+import styles from './landingPage.module.css'
 import { NavLink } from 'react-router-dom'
 
 const LandingPage = () => {
 
   return (
-    <div className="app">
+    <div className={styles.app}>
       {/* Header */}
-      <header className="header">
-        <div className="container">
-          <div className="logo">
-            <div className="logo-icon">◆</div>
-            <a href='#' className="footer-logo">PlacePin</a>
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <div className={styles.logo}>
+            <div className={styles.logoIcon}>◆</div>
+            <a href='#' className={styles.footerLogo}>PlacePin</a>
           </div>
-          <nav className="nav">
+          <nav className={styles.nav}>
             <a href="#how-it-works">How it Works</a>
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
           </nav>
           <NavLink to='/signup'>
-            <button className="cta-button">Get Started</button>
+            <button className={styles.ctaButton}>Get Started</button>
           </NavLink>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
+      <section className={styles.hero}>
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
             <h1>Better Living. Better Management.</h1>
             <p>Smart services for tenants. Smarter solutions for landlords.</p>
-            <div className="hero-buttons">
+            <div className={styles.heroButtons}>
               <NavLink to='/signup'>
-                <button className="primary-button">Get Started</button>
+                <button className={styles.primaryButton}>Get Started</button>
               </NavLink>
-              <a href="#features"><button className="secondary-button">Learn More</button></a>
+              <a href="#features"><button className={styles.secondaryButton}>Learn More</button></a>
             </div>
             {/* <div className="social-proof">
               <div className="avatars">
@@ -44,14 +44,14 @@ const LandingPage = () => {
               <span>100+ Happy Customers</span>
             </div> */}
           </div>
-          <div className="hero-visual">
-            <div className="sphere-container">
-              <img className="sphere" src='/housing.jpg' alt='city' />
-              <div className="ui-element theme">
+          <div className={styles.heroVisual}>
+            <div>
+              <img className={styles.sphere} src='/housing.jpg' alt='city' />
+              <div className={`${styles.uiElement} ${styles.theme}`}>
                 <span>🏙️</span>
                 <span>Elevate Your Living</span>
               </div>
-              <div className="ui-element changing">
+              <div className={`${styles.uiElement} ${styles.changing}`}>
                 <span>🔑</span>
                 <span>The Future of Renting</span>
               </div>
@@ -61,28 +61,28 @@ const LandingPage = () => {
       </section>
 
       {/* How it works */}
-      <section className="how-it-works-section" id="how-it-works">
-        <div className="container">
-          <div className="section-header">
+      <section className={styles.howItWorksSection} id="how-it-works">
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
             <h2>How It Works</h2>
             <p>Simple steps to get started — whether you're a tenant or a landlord.</p>
           </div>
 
           {/* Tenant Steps */}
           <h3>For Tenants</h3>
-          <div className="steps-cards">
-            <div className="step-card">
-              <div className="icon">🔍</div>
+          <div className={styles.stepsCards}>
+            <div className={styles.stepCard}>
+              <div className={styles.icon}>🔍</div>
               <h4>Find Your Home</h4>
               <p>Search available listings and discover apartments with the perks you want.</p>
             </div>
-            <div className="step-card">
-              <div className="icon">📝</div>
+            <div className={styles.stepCard}>
+              <div className={styles.icon}>📝</div>
               <h4>Apply Securely</h4>
               <p>Submit applications and sign leases online with ease and confidence.</p>
             </div>
-            <div className="step-card">
-              <div className="icon">💳</div>
+            <div className={styles.stepCard}>
+              <div className={styles.icon}>💳</div>
               <h4>Pay & Enjoy</h4>
               <p>Pay rent, track expenses, and enjoy exclusive perks directly through our platform.</p>
             </div>
@@ -90,19 +90,19 @@ const LandingPage = () => {
 
           {/* Landlord Steps */}
           <h3>For Landlords</h3>
-          <div className="steps-cards">
-            <div className="step-card">
-              <div className="icon">🏢</div>
+          <div className={styles.stepsCards}>
+            <div className={styles.stepCard}>
+              <div className={styles.icon}>🏢</div>
               <h4>List Your Property</h4>
               <p>Add your building and units to the platform in minutes.</p>
             </div>
-            <div className="step-card">
-              <div className="icon">📊</div>
+            <div className={styles.stepCard}>
+              <div className={styles.icon}>📊</div>
               <h4>Track & Manage</h4>
               <p>Monitor rent collection, tenant activity, and building performance all in one place.</p>
             </div>
-            <div className="step-card">
-              <div className="icon">🤝</div>
+            <div className={styles.stepCard}>
+              <div className={styles.icon}>🤝</div>
               <h4>Engage Tenants</h4>
               <p>Offer perks and services that boost tenant satisfaction and retention.</p>
             </div>
@@ -111,34 +111,34 @@ const LandingPage = () => {
       </section>
 
       {/* Tools tenants love Section */}
-      <section className="launch-section" id="features">
-        <div className="container">
-          <div className="launch-content">
+      <section className={styles.launchSection} id="features">
+        <div className={styles.container}>
+          <div className={styles.launchContent}>
             <h2>Services Tenants Love, Tools Landlords Trust</h2>
             <p>Our platform connects tenants with curated perks and services while giving landlords powerful tools to manage their properties effortlessly. Everyone wins.</p>
           </div>
-          <div className="feature-cards">
-            <div className="feature-card">
-              <div className="feature-visual">
+          <div className={styles.featureCards}>
+            <div className={styles.featureCard}>
+              <div className={styles.featureVisual}>
                 <div>
-                  <img src='/tenantPerks.png' alt='tenant perks' className='tenantPerks' />
+                  <img src='/tenantPerks.png' alt='tenant perks' className={styles.tenantPerks} />
                 </div>
               </div>
               <h3>Tenant Perks</h3>
               <p>Laundry, housekeeping, gym access, and exclusive discounts—your home just got an upgrade.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-visual">
-                <img src='/charts.png' alt='charts' className='charts' />
+            <div className={styles.featureCard}>
+              <div className={styles.featureVisual}>
+                <img src='/charts.png' alt='charts' className={styles.charts} />
               </div>
               <h3>Landlord Tools</h3>
               <p>Property tools, rent collection, and tenant communication all in one place for landlords.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-visual">
-                <div className="publish-button">
+            <div className={styles.featureCard}>
+              <div className={styles.featureVisual}>
+                <div className={styles.publishButton}>
                   <span>Upgrade</span>
-                  <div className="cursor">👆</div>
+                  <div className={styles.cursor}>👆</div>
                 </div>
               </div>
               <h3>Flexible Plans</h3>
@@ -149,19 +149,19 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="pricing-section" id="pricing">
-        <div className="container">
-          <div className="section-header">
+      <section className={styles.pricingSection} id="pricing">
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
             <h2>Affordable Plans For Everyone.</h2>
             <p>Get the features you need without breaking the bank. Our flexible plans fit teams of all sizes, helping you start strong and scale effortlessly with clear, transparent pricing.</p>
           </div>
-          <div className="pricing-cards single-card">
-            <div className="pricing-card landlord-card">
-              <div className="plan-label">LANDLORDS</div>
+          <div className={`${styles.pricingCards} ${styles.singleCard}`}>
+            <div className={`${styles.pricingCard} ${styles.landlordCard}`}>
+              <div className={styles.planLabel}>LANDLORDS</div>
               <h3>Building Plan</h3>
-              <div className="price">~2.5%<span> of monthly building rent</span></div>
-              <button className="primary-button">Start Managing &gt;</button>
-              <div className="features landlord-features">
+              <div className={styles.price}>~2.5%<span> of monthly building rent</span></div>
+              <button className={styles.primaryButton}>Start Managing &gt;</button>
+              <div className={`${styles.features} ${styles.landlordFeatures}`}>
                 <h4>For property owners</h4>
                 <ul>
                   <li>✓ Transparent fee based on your building’s expected gross rental income</li>
@@ -173,13 +173,13 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="pricing-cards">
-            <div className="pricing-card">
-              <div className="plan-label">TENANTS</div>
+          <div className={styles.pricingCards}>
+            <div className={styles.pricingCard}>
+              <div className={styles.planLabel}>TENANTS</div>
               <h3>Essential</h3>
-              <div className="price">$50<span>month</span></div>
-              <button className="secondary-button">Get Started &gt;</button>
-              <div className="features">
+              <div className={styles.price}>$50<span>month</span></div>
+              <button className={styles.secondaryButton}>Get Started &gt;</button>
+              <div className={styles.features}>
                 <h4>Perfect for individuals</h4>
                 <ul>
                   <li>✓ Laundry service (basic)</li>
@@ -189,13 +189,13 @@ const LandingPage = () => {
                 </ul>
               </div>
             </div>
-            <div className="pricing-card popular">
-              <div className="popular-badge">MOST POPULAR</div>
-              <div className="plan-label">TENANTS</div>
+            <div className={`${styles.pricingCard} ${styles.popular}`}>
+              <div className={styles.popularBadge}>MOST POPULAR</div>
+              <div className={styles.planLabel}>TENANTS</div>
               <h3>Balanced</h3>
-              <div className="price">$120<span>month</span></div>
-              <button className="primary-button">Get Started &gt;</button>
-              <div className="features">
+              <div className={styles.price}>$120<span>month</span></div>
+              <button className={styles.primaryButton}>Get Started &gt;</button>
+              <div className={styles.features}>
                 <h4>Great for small households</h4>
                 <ul>
                   <li>✓ Everything in Comfort</li>
@@ -205,12 +205,12 @@ const LandingPage = () => {
                 </ul>
               </div>
             </div>
-            <div className="pricing-card">
-              <div className="plan-label">TENANTS</div>
+            <div className={styles.pricingCard}>
+              <div className={styles.planLabel}>TENANTS</div>
               <h3>Platinum</h3>
-              <div className="price">$200<span>month</span></div>
-              <button className="secondary-button">Get Started &gt;</button>
-              <div className="features">
+              <div className={styles.price}>$200<span>month</span></div>
+              <button className={styles.secondaryButton}>Get Started &gt;</button>
+              <div className={styles.features}>
                 <h4>Made for premium living</h4>
                 <ul>
                   <li>✓ Everything in Premium</li>
@@ -225,54 +225,54 @@ const LandingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section" id="contact">
-        <div className="container">
-          <div className="cta-content">
+      <section className={styles.ctaSection} id="contact">
+        <div className={styles.container}>
+          <div className={styles.ctaContent}>
             <p>Stay in the loop. Enter your email and be the first to know when new features roll out.</p>
           </div>
-          <div className="cta-form">
+          <div className={styles.ctaForm}>
             <p>Just send us your contact email and we will contact you.</p>
-            <div className="email-input">
+            <div className={styles.emailInput}>
               <input type="email" placeholder="Your@email.com" />
-              <button className="submit-button">→</button>
+              <button className={styles.submitButton}>→</button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-brand">
-            <div className='logo'>
-              <div className="logo-icon">◆</div>
-              <a href='#' className="footer-logo">PlacePin</a>
+      <footer className={styles.footer}>
+        <div className={styles.container}>
+          <div>
+            <div className={styles.logo}>
+              <div className={styles.logoIcon}>◆</div>
+              <a className={styles.logoWord} href='#'>PlacePin</a>
             </div>
-            <p className="footer-slogan">Smart services for tenants. Smarter solutions for landlords.</p>
+            <p>Smart services for tenants. Smarter solutions for landlords.</p>
           </div>
 
-          <div className="footer-links">
-            <div className="footer-column">
+          <div className={styles.footerLinks}>
+            <div className={styles.footerColumn}>
               <h4>Explore</h4>
               <a href="#how-it-works">How it Works</a>
               <a href="#features">Features</a>
               <a href="#pricing">Pricing</a>
               <a href="#contact">Contact</a>
             </div>
-            <div className="footer-column">
+            <div className={styles.footerColumn}>
               <h4>About</h4>
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
             </div>
           </div>
 
-          <div className="footer-cta">
+          <div className={styles.footerCta}>
             <NavLink to='/signup'>
-              <button className="primary-button">Get Started →</button>
+              <button className={styles.primaryButton}>Get Started →</button>
             </NavLink>
           </div>
 
-          <div className="footer-bottom">
+          <div>
             <p>© 2025 PlacePin. All rights reserved.</p>
           </div>
         </div>
