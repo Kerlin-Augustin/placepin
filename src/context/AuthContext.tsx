@@ -2,12 +2,12 @@ import { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
 
 interface AuthContextType {
-  email: string | null
-  accessToken: string | null
+  email: string | null,
+  accessToken: string | null,
   username: string | null,
   login: (
-    email: string,
     accessToken: string,
+    email: string,
     username: string,
   ) => void
   logout: () => void,
@@ -25,29 +25,23 @@ export const AuthProvider = ({
   const [accessToken, setAccessToken] = useState<string | null>(() => localStorage.getItem('accessToken'));
   const [username, setUsername] = useState<string | null>(() => localStorage.getItem('username'));
 
-
-  const login = (email: string, accessToken: string, username: string) => {
-    setEmail(email)
+  const login = (accessToken: string, email: string, username: string) => {
     setAccessToken(accessToken)
+    setEmail(email)
     setUsername(username)
-
     localStorage.setItem('accessToken', accessToken);
-    localStorage.setItem('email', email);
-    localStorage.setItem('username', username);
   }
 
   const logout = () => {
-    setEmail(null)
     setAccessToken(null)
+    setEmail(null)
     setUsername(null)
-
-    localStorage.removeItem('email');
+    
     localStorage.removeItem('accessToken');
-    localStorage.removeItem('username');
   }
 
   return (
-    <AuthContext.Provider value={{ email, accessToken, username, login, logout }}>
+    <AuthContext.Provider value={{ accessToken, email, username, login, logout }}>
       {children}
     </AuthContext.Provider>
   )

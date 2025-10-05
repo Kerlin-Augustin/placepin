@@ -28,8 +28,8 @@ const LoginPage = () => {
       )
 
       if (res.status === 200) {
-        const { accessToken, email, username, accountType } = res.data
-        login(email, accessToken, username)
+        const { accessToken, accountType, email, username } = res.data
+        login(accessToken, email, username)
         if(accountType === 'landlord'){
           navigate('/landlorddashboard')
         }

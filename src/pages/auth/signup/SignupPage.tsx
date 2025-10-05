@@ -44,7 +44,7 @@ const SignupPage = () => {
       const res = await axios.post('/api/signup', signupInformation)
       if (res.status === 201) {
         const { accessToken, accountType } = res.data
-        login(email, accessToken, username)
+        login(accessToken, email, username)
         if(accountType === 'landlord'){
           navigate('/landlorddashboard')
         }
