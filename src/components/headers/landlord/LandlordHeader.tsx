@@ -1,4 +1,4 @@
-import './landlordHeader.css';
+import styles from './landlordHeader.module.css';
 
 interface LandlordHeaderProps {
   username: string,
@@ -6,7 +6,7 @@ interface LandlordHeaderProps {
 
 const LandlordHeader = ({username}: LandlordHeaderProps) => {
   return (
-    <div className="landlordHeaderContainer">
+    <div className={styles.landlordHeaderContainer}>
       Welcome, {username}
     </div>
   )

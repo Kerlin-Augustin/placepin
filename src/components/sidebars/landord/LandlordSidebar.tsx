@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useAuth } from '../../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import SidebarButton from "../../buttons/SidebarButton";
-import './landlordSidebar.css';
+import styles from './landlordSidebar.module.css';
 
 const LandlordSidebar = () => {
 
@@ -15,12 +15,12 @@ const LandlordSidebar = () => {
   }
 
   const tabs = [
-    <NavLink className="nav-link" to="landlordtenants"><SidebarButton buttonText="Tenants" /></NavLink>,
-    <NavLink className="nav-link" to="landlordproperties"><SidebarButton buttonText="Properties" /></NavLink>,
-    <NavLink className="nav-link" to="landlordmessaging"><SidebarButton buttonText="Messaging" /></NavLink>,
-    <NavLink className="nav-link" to="landlordtenantinsights"><SidebarButton buttonText="Tenant Insights" /></NavLink>,
-    <NavLink className="nav-link" to="landlordvendors"><SidebarButton buttonText="Vendors" /></NavLink>,
-    <NavLink className="nav-link" to="landlordbillingpayments"><SidebarButton buttonText="Billing & Payments" /></NavLink>,]
+    <NavLink className={styles.navLink} to="landlordtenants"><SidebarButton buttonText="Tenants" /></NavLink>,
+    <NavLink className={styles.navLink} to="landlordproperties"><SidebarButton buttonText="Properties" /></NavLink>,
+    <NavLink className={styles.navLink} to="landlordmessaging"><SidebarButton buttonText="Messaging" /></NavLink>,
+    <NavLink className={styles.navLink} to="landlordtenantinsights"><SidebarButton buttonText="Tenant Insights" /></NavLink>,
+    <NavLink className={styles.navLink} to="landlordvendors"><SidebarButton buttonText="Vendors" /></NavLink>,
+    <NavLink className={styles.navLink} to="landlordbillingpayments"><SidebarButton buttonText="Billing & Payments" /></NavLink>,]
 
     const allTabs = tabs.map((tab, index) => {
       return (
@@ -30,20 +30,20 @@ const LandlordSidebar = () => {
 
   return (
     <>
-      <aside className="sideBarContainer">
-      <div className="logoAndTabs">
-        <h2 className="logoText">
-          <NavLink className="nav-link" to="">
+      <aside className={styles.sideBarContainer}>
+      <div className={styles.logoAndTabs}>
+        <h2 className={styles.logoText}>
+          <NavLink className={styles.navLink} to="">
           PlacePin
           </NavLink>
         </h2>
-        <div className="tabs">
+        <div className={styles.tabs}>
           {allTabs}
         </div>
       </div>
-      <div className="profile">
+      <div className={styles.profile}>
         <h3
-          className="profileText"
+          className={styles.profileText}
           onClick={handleSignout}
           >
           Sign Out

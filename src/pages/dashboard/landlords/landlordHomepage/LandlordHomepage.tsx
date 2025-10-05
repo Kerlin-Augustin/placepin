@@ -1,8 +1,8 @@
-import './landlordHomepage.css';
+import styles from './landlordHomepage.module.css';
 
 const LandlordHomepage = () => {
   return (
-    <div className="landlordHomepageContainer">
+    <div className={styles.landlordHomepageContainer}>
       Landlord Homepage
     </div>
   )

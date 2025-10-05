@@ -1,4 +1,4 @@
-import './sidebarButton.css';
+import styles from './sidebarButton.module.css';
 
 interface SidebarButtonProps {
   buttonText: string
@@ -7,8 +7,8 @@ interface SidebarButtonProps {
 function SidebarButton({buttonText}: SidebarButtonProps) {
 
   return (
-    <div className="sidebarButton">
-      <h2 className='sidebarButtonText'>{buttonText}</h2>
+    <div className={styles.sidebarButton}>
+      <h2 className={styles.sidebarButtonText}>{buttonText}</h2>
     </div>
   )
 }
