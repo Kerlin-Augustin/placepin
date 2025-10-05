@@ -19,7 +19,7 @@
   margin: 0 5em 1em 0;
 }
 
-.signup-logo {
+.signupLogo {
   margin: 0 0 2em 0;
   color: #fff;
   font-size: 25px;
@@ -36,7 +36,7 @@
   font-size: 18px;
 }
 
-.top-container {
+.topContainer {
   display: flex;
   align-items: stretch;
   background: #f5f0eb;
@@ -91,7 +91,7 @@
   text-align: center;
 }
 
-.nav-link {
+.navLink {
   text-decoration: none;
   color: inherit;
 }
