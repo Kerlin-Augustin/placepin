@@ -19,6 +19,7 @@ export const signupController = async (req: Request, res: Response) => {
 
   try {
 
+    // Check if user already exists in either collection
     existingEmail = await TenantModel.findOne({ email }) || await LandlordModel.findOne({ email })
 
     if(existingEmail){
@@ -26,8 +27,10 @@ export const signupController = async (req: Request, res: Response) => {
       return
     }
 
+    // Hash the password before storing in DB for security
     hashedPassword = await bcrypt.hash(password, saltRounds)
     
+    // Create a new user document depending on account type
     if(accountType === 'tenant'){
       newUser = new TenantModel({
         username,
@@ -51,10 +54,16 @@ export const signupController = async (req: Request, res: Response) => {
       })
     }
 
-    await newUser.save()
+    // Save the user to the database
+    await newUser.save();
 
-    const accessToken = jwt.sign({ email }, JWT_ACCESS_TOKEN, { expiresIn: '30d' })
+    // Grabbing the userID from the database and transforming it to a string
+    const userID = await newUser._id.toString()
 
+    // Create JWT with email, userID and username as payload
+    const accessToken = jwt.sign({ email, userID, username }, JWT_ACCESS_TOKEN, { expiresIn: '30d' })
+
+    // Respond with the token and account type
     res.status(201).json({ message: 'User Created Successfully', accessToken, accountType})
   } catch (err) {
     console.error('Failed to create user', err)

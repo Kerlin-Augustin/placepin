@@ -21,9 +21,9 @@ export const AuthProvider = ({
   children: ReactNode
 }) => {
 
-  const [email, setEmail] = useState<string | null>(() => localStorage.getItem('email'));
+  const [email, setEmail] = useState<string | null>(null);
   const [accessToken, setAccessToken] = useState<string | null>(() => localStorage.getItem('accessToken'));
-  const [username, setUsername] = useState<string | null>(() => localStorage.getItem('username'));
+  const [username, setUsername] = useState<string | null>(null);
 
   const login = (accessToken: string, email: string, username: string) => {
     setAccessToken(accessToken)
