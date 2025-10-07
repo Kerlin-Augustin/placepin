@@ -1,6 +1,7 @@
 .landlordHomepageContainer {
   display: flex;
   height: 100%;
+  padding: 1rem;
 }
 
 .statsContainer > h3 {
@@ -8,5 +9,7 @@
 }
 
 .statsCards {
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }

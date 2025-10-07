@@ -1,14 +1,14 @@
-import styles from './activeTenants.module.css';
+import styles from './activeTenantsCard.module.css';
 
-interface ActiveTenantsProps {
+interface ActiveTenantsCardProps {
   numberOfTenants: number,
   tenantsWithSubscription: number,
 }
 
-const ActiveTenants = ({
+const ActiveTenantsCard = ({
   numberOfTenants,
   tenantsWithSubscription,
-}: ActiveTenantsProps) => {
+}: ActiveTenantsCardProps) => {
 
   const handleInvite = () => {
 
@@ -31,4 +31,4 @@ const ActiveTenants = ({
   )
 }
 
-export default ActiveTenants
+export default ActiveTenantsCard

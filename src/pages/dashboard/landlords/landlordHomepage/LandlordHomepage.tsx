@@ -1,5 +1,6 @@
 import styles from './landlordHomepage.module.css';
-import ActiveTenants from '../../../../components/cards/landlord/ActiveTenants';
+import ActiveTenantsCard from '../../../../components/cards/landlord/ActiveTenantsCard';
+import PerkAdoptionCard from '../../../../components/cards/landlord/PerkAdoptionCard';
 
 const LandlordHomepage = () => {
   return (
@@ -7,7 +8,8 @@ const LandlordHomepage = () => {
       <div className={styles.statsContainer}>
         <h3>Stats / KPI's</h3>
         <div className={styles.statsCards}>
-          <ActiveTenants numberOfTenants={0} tenantsWithSubscription={0}/>
+          <ActiveTenantsCard numberOfTenants={0} tenantsWithSubscription={0}/>
+          <PerkAdoptionCard />
         </div>
       </div>
     </div>
