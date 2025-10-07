@@ -7,6 +7,7 @@ interface LandlordHeaderProps {
 
 const LandlordHeader = ({ username }: LandlordHeaderProps) => {
 
+  // The Dashboard header that renders settings button
   return (
     <div className={styles.landlordHeaderContainer}>
       <h2 className={styles.headerTitle}>
