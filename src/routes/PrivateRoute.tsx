@@ -2,14 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { useAuth } from '../context/AuthContext';
-
-interface DecodedAccessToken {
-  email: string;
-  userID: string;
-  username: string,
-  iat: number;
-  exp: number;
-}
+import type { DecodedAccessToken } from '../pages/dashboard/landlords/LandlordDashboard';
 
 const PrivateRoute = () => {
   const { accessToken, logout } = useAuth();

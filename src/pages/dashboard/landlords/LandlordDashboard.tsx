@@ -5,7 +5,7 @@ import LandlordHeader from "../../../components/headers/landlord/LandlordHeader"
 import styles from './landlordDashboard.module.css';
 import { jwtDecode } from "jwt-decode";
 
-interface DecodedAccessToken {
+export interface DecodedAccessToken {
   email: string;
   userID: string;
   username: string,

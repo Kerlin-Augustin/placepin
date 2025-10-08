@@ -14,4 +14,9 @@
 .settingsIcon {
   margin-right: 1em;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.settingsIcon:hover {
+  transform: rotate(90deg);
 }
