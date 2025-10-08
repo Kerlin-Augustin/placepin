@@ -11,12 +11,12 @@ const ActiveTenantsCard = ({
 }: ActiveTenantsCardProps) => {
 
   return (
-    <div>
+    <>
       {!numberOfTenants
         ? <span className={styles.noTenants}>None</span>
         : <p>{`${tenantsWithSubscription}/${numberOfTenants}`}</p>
       }
-    </div>
+    </>
   )
 }
 

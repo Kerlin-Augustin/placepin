@@ -18,11 +18,26 @@ const LandlordHomepage = () => {
       <div className={styles.statsContainer}>
         <h3>Stats / KPI's</h3>
         <div className={styles.statsCards}>
-          <StatsKPICard title={'Active Tenants'} ctaText={'Invite Tenants'} handleClick={handleInvite}>
-            <ActiveTenantsCard numberOfTenants={0} tenantsWithSubscription={0} />
+          <StatsKPICard
+            title={'Active Tenants'}
+            ctaText={'Invite Tenants'}
+            handleClick={handleInvite}
+          >
+            <ActiveTenantsCard
+              numberOfTenants={0}
+              tenantsWithSubscription={0}
+            />
           </StatsKPICard>
-          <StatsKPICard title={'Perk Adoption'} ctaText={'Tip: Tenants using perks renew 20% more often.'} handleClick={handleNudge}>
-            <PerkAdoptionCard />
+          <StatsKPICard
+            title={'Perk Adoption'}
+            ctaText={'Tip: Tenants using perks renew 20% more often.'}
+            handleClick={handleNudge}
+          >
+            <PerkAdoptionCard
+              numberOfTenants={0}
+              tenantsUsingPerksPercentage={0}
+              mostUsedPerk={''}
+            />
           </StatsKPICard>
         </div>
       </div>

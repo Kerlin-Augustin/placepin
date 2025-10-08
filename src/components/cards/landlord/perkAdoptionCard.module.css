@@ -7,3 +7,19 @@
 .cardItem {
   text-decoration: none;
 }
+
+.noTenants {
+  font-size: 32px;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.noTenants:hover {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
