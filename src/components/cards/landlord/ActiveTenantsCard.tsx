@@ -1,5 +1,3 @@
-import styles from './activeTenantsCard.module.css';
-
 interface ActiveTenantsCardProps {
   numberOfTenants: number,
   tenantsWithSubscription: number,
@@ -10,23 +8,12 @@ const ActiveTenantsCard = ({
   tenantsWithSubscription,
 }: ActiveTenantsCardProps) => {
 
-  const handleInvite = () => {
-
-  }
-
   return (
-    <div className={styles.cardContainer}>
-      <h4 className={styles.activeTenants}>Active Tenants</h4>
+    <div>
       {!numberOfTenants
-        ? <p className={styles.noTenants}>None</p>
-        : <p className={styles.activeSubs}>{`${tenantsWithSubscription}/${numberOfTenants}`}</p>
+        ? <p>None</p>
+        : <p>{`${tenantsWithSubscription}/${numberOfTenants}`}</p>
       }
-      <p
-          className={styles.inviteTenants}
-          onClick={handleInvite}
-        >
-          Invite Tenants
-        </p>
     </div>
   )
 }
