@@ -1,57 +1,45 @@
-import { NavLink } from "react-router-dom";
-import { useAuth } from '../../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import SidebarButton from "../../buttons/SidebarButton";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from './landlordSidebar.module.css';
+import { Home, Users, MessageCircle, BarChart, Briefcase, CreditCard } from 'lucide-react';
 
 const LandlordSidebar = () => {
-
-  const navigate = useNavigate()
-  const { logout } = useAuth()
-
-  const handleSignout = () => {
-    logout()
-    navigate('/')
-  }
+  const location = useLocation();
 
   const tabs = [
-    <NavLink className={styles.navLink} to="landlordtenants"><SidebarButton buttonText="Tenants" /></NavLink>,
-    <NavLink className={styles.navLink} to="landlordproperties"><SidebarButton buttonText="Properties" /></NavLink>,
-    <NavLink className={styles.navLink} to="landlordmessaging"><SidebarButton buttonText="Messaging" /></NavLink>,
-    <NavLink className={styles.navLink} to="landlordtenantinsights"><SidebarButton buttonText="Tenant Insights" /></NavLink>,
-    <NavLink className={styles.navLink} to="landlordvendors"><SidebarButton buttonText="Vendors" /></NavLink>,
-    <NavLink className={styles.navLink} to="landlordbillingpayments"><SidebarButton buttonText="Billing & Payments" /></NavLink>,]
-
-    const allTabs = tabs.map((tab, index) => {
-      return (
-        <div key={index}>{tab}</div>
-      )
-    })
+    { path: "landlordtenants", text: "Tenants", icon: <Users size={18} /> },
+    { path: "landlordproperties", text: "Properties", icon: <Home size={18} /> },
+    { path: "landlordmessaging", text: "Messaging", icon: <MessageCircle size={18} /> },
+    { path: "landlordtenantinsights", text: "Tenant Insights", icon: <BarChart size={18} /> },
+    { path: "landlordvendors", text: "Vendors", icon: <Briefcase size={18} /> },
+    { path: "landlordbillingpayments", text: "Billing & Payments", icon: <CreditCard size={18} /> },
+  ];
 
   return (
-    <>
-      <aside className={styles.sideBarContainer}>
+    <aside className={styles.sideBarContainer}>
       <div className={styles.logoAndTabs}>
-        <h2 className={styles.logoText}>
-          <NavLink className={styles.navLink} to="">
-          PlacePin
-          </NavLink>
-        </h2>
+        <NavLink className={styles.navLink} to="">
+          <h2 className={styles.logoText}>PlacePin</h2>
+        </NavLink>
         <div className={styles.tabs}>
-          {allTabs}
+          {tabs.map((tab) => (
+            <NavLink
+              key={tab.path}
+              to={tab.path}
+              className={styles.navLink}
+            >
+              <div
+                className={`${styles.sidebarItem} ${location.pathname.includes(tab.path) ? 'active' : ''
+                  }`}
+              >
+                {tab.icon}
+                <span style={{ marginLeft: "0.75rem" }}>{tab.text}</span>
+              </div>
+            </NavLink>
+          ))}
         </div>
       </div>
-      <div className={styles.profile}>
-        <h3
-          className={styles.profileText}
-          onClick={handleSignout}
-          >
-          Sign Out
-        </h3>
-      </div>
     </aside>
-    </>
-  )
-}
+  );
+};
 
-export default LandlordSidebar
+export default LandlordSidebar;
