@@ -4,6 +4,7 @@ import { Settings } from 'lucide-react';
 import DropdownModal from '../../modals/DropdownModal';
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
+import { LANDLORD_ROUTES } from "../../../routes/landlordRoutes";
 
 interface LandlordHeaderProps {
   username: string,
@@ -21,18 +22,22 @@ const LandlordHeader = ({ username }: LandlordHeaderProps) => {
     navigate('/')
   }
 
+  const handleSettings = () => {
+    navigate(LANDLORD_ROUTES.SETTINGS)
+  }
+
   const handleSelect = (selection: string) => {
     if (selection === "Sign out") {
       handleSignout()
     } else if (selection === "Settings") {
-      console.log("Go to settings");
+      handleSettings()
     }
     setShowDropdown(false);
   };
 
   const handleToggle = () => setShowDropdown(prev => !prev);
 
-  // Click outside to close
+  // Click outside the modal and header to close
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {

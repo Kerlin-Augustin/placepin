@@ -3,6 +3,8 @@ import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useAuth } from '../../../context/AuthContext';
+import { LANDLORD_ROUTES } from '../../../routes/landlordRoutes'; 
+import { TENANT_ROUTE } from '../../../routes/tenantRoutes';
 
 const SignupPage = () => {
   const navigate = useNavigate()
@@ -50,10 +52,10 @@ const SignupPage = () => {
         const { accessToken, accountType } = res.data
         login(accessToken, email, username)
         if(accountType === 'landlord'){
-          navigate('/landlorddashboard')
+          navigate(LANDLORD_ROUTES.DASHBOARD)
         }
         if(accountType === 'tenant'){
-          navigate('/tenantdashboard')
+          navigate(TENANT_ROUTE.DASHBOARD)
         }
       }
     } catch (err: any) {

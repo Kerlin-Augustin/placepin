@@ -1,17 +1,18 @@
 import { NavLink, useLocation } from "react-router-dom";
 import styles from './landlordSidebar.module.css';
 import { Home, Users, MessageCircle, BarChart, Briefcase, CreditCard } from 'lucide-react';
+import { LANDLORD_ROUTES } from "../../../routes/landlordRoutes";
 
 const LandlordSidebar = () => {
   const location = useLocation();
 
   const tabs = [
-    { path: "landlordtenants", text: "Tenants", icon: <Users size={18} /> },
-    { path: "landlordproperties", text: "Properties", icon: <Home size={18} /> },
-    { path: "landlordmessaging", text: "Messaging", icon: <MessageCircle size={18} /> },
-    { path: "landlordtenantinsights", text: "Tenant Insights", icon: <BarChart size={18} /> },
-    { path: "landlordvendors", text: "Vendors", icon: <Briefcase size={18} /> },
-    { path: "landlordbillingpayments", text: "Billing & Payments", icon: <CreditCard size={18} /> },
+    { path: LANDLORD_ROUTES.TENANTS, text: "Tenants", icon: <Users size={18} /> },
+    { path: LANDLORD_ROUTES.PROPERTIES, text: "Properties", icon: <Home size={18} /> },
+    { path: LANDLORD_ROUTES.MESSAGING, text: "Messaging", icon: <MessageCircle size={18} /> },
+    { path: LANDLORD_ROUTES.INSIGHTS, text: "Tenant Insights", icon: <BarChart size={18} /> },
+    { path: LANDLORD_ROUTES.VENDORS, text: "Vendors", icon: <Briefcase size={18} /> },
+    { path: LANDLORD_ROUTES.BILLING, text: "Billing & Payments", icon: <CreditCard size={18} /> },
   ];
 
   return (
