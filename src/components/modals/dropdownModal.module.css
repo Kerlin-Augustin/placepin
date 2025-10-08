@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  top: 40px; /* adjust for icon */
+  top: 40px;
   right: 0;
   background-color: #fff;
   border: 1px solid rgba(0,0,0,0.1);

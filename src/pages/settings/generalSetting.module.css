@@ -1,0 +1,80 @@
+.entireContainer {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.entireContainer h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.innerContainer {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  height: calc(100vh - 8rem);
+}
+
+/* LEFT: Settings Navigation */
+.settingsNav {
+  background: white;
+  border-radius: 1rem;
+  width: 20%;
+  min-width: 220px; 
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.settingsNav p {
+  font-weight: 500;
+  cursor: pointer;
+  color: #444;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.settingsNav p:hover {
+  background: #f2f2f2;
+  transform: translateX(4px);
+}
+
+/* RIGHT: Dynamic Content */
+.mainContent {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .settingsNav {
+    width: 100%;
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
