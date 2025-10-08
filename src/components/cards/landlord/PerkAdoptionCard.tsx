@@ -25,7 +25,7 @@ const PerkAdoptionCard = ({
             Tenants Using Perks: {tenantsUsingPerksPercentage}%
           </li>
           <li className={styles.cardItem}>
-            Most Popular Perk: {mostUsedPerk}
+            Most Popular Perk: {tenantsUsingPerksPercentage > 0 ? mostUsedPerk : <span>None</span>}
           </li>
         </ul>
       }
