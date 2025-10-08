@@ -1,8 +1,10 @@
 const GeneralSettings = () => {
   return (
-    <>
-    General Settings
-    </>
+    <div>
+      <h2>
+        General Settings
+      </h2>
+    </div>
   )
 }
 

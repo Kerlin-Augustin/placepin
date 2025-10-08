@@ -19,7 +19,7 @@ const LandlordSidebar = () => {
     <aside className={styles.sideBarContainer}>
       <div className={styles.logoAndTabs}>
         <NavLink className={styles.navLink} to="">
-          <h2 className={styles.logoText}>PlacePin</h2>
+          <h1 className={styles.logoText}>PlacePin</h1>
         </NavLink>
         <div className={styles.tabs}>
           {tabs.map((tab) => (
