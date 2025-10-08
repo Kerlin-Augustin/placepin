@@ -1,3 +1,5 @@
+import styles from './activeTenantsCard.module.css';
+
 interface ActiveTenantsCardProps {
   numberOfTenants: number,
   tenantsWithSubscription: number,
@@ -11,7 +13,7 @@ const ActiveTenantsCard = ({
   return (
     <div>
       {!numberOfTenants
-        ? <p>None</p>
+        ? <span className={styles.noTenants}>None</span>
         : <p>{`${tenantsWithSubscription}/${numberOfTenants}`}</p>
       }
     </div>

@@ -9,6 +9,10 @@ const LandlordHomepage = () => {
     console.log('Make modal popup to send email invite!')
   }
 
+  const handleNudge = () => {
+    console.log("Make a model to nudge a tenant that hasn't used a perk in awhile!")
+  }
+
   return (
     <div className={styles.landlordHomepageContainer}>
       <div className={styles.statsContainer}>
@@ -17,7 +21,7 @@ const LandlordHomepage = () => {
           <StatsKPICard title={'Active Tenants'} ctaText={'Invite Tenants'} handleClick={handleInvite}>
             <ActiveTenantsCard numberOfTenants={0} tenantsWithSubscription={0} />
           </StatsKPICard>
-          <StatsKPICard title={'Perk Adoption'} ctaText={'Tip: Tenants using perks renew 20% more often.'} handleClick={handleInvite}>
+          <StatsKPICard title={'Perk Adoption'} ctaText={'Tip: Tenants using perks renew 20% more often.'} handleClick={handleNudge}>
             <PerkAdoptionCard />
           </StatsKPICard>
         </div>
