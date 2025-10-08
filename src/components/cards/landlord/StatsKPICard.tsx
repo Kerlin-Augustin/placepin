@@ -16,16 +16,20 @@ const StatsKPICard = ({
 }: StatsKPICardProps) => {
   return (
     <div className={styles.cardContainer}>
-      <h4 className={styles.cardTitle}>{title}</h4>
-      <div className={styles.childrenContainer}>
-        {children}
+      <div className={styles.cardBody}>
+        <h4 className={styles.cardTitle}>{title}</h4>
+        <div className={styles.childrenContainer}>
+          {children}
+        </div>
       </div>
-      <p
-        className={styles.ctaSection}
-        onClick={handleClick}
-      >
-        {ctaText}
-      </p>
+      <div className={styles.ctaSection}>
+        <p
+          className={styles.ctaText}
+          onClick={handleClick}
+        >
+          {ctaText}
+        </p>
+      </div>
     </div>
   )
 }
