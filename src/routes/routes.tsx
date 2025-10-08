@@ -34,7 +34,7 @@ const routes: RouteObject[] = [
           {path: LANDLORD_CHILD_ROUTES.INSIGHTS, element: <LandlordTenantInsights />},
           {path: LANDLORD_CHILD_ROUTES.VENDORS, element: <LandlordVendors />},
           {path: LANDLORD_CHILD_ROUTES.MESSAGING, element: <LandlordMessaging />},
-          {path: LANDLORD_CHILD_ROUTES.MESSAGING, element: <GeneralSettings />},
+          {path: LANDLORD_CHILD_ROUTES.SETTINGS, element: <GeneralSettings />},
         ]
       }
     ]
