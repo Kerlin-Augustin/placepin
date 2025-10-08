@@ -20,16 +20,19 @@ const SignupPage = () => {
   const handleCreateAccount = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    // Make sure the password is at least 8 chars long
     if (password.length < 8) {
       setErrorMessage('Password must be at least 8 characters.')
       return
     }
 
+    // Make sure someone chose an account type
     if (accountType.length === 0) {
       setErrorMessage('Choose an account type')
       return
     }
 
+    // Save all of the input fields into a object to be sent to the backend
     const signupInformation = {
       username,
       email,
@@ -40,6 +43,7 @@ const SignupPage = () => {
       promo,
     }
 
+    // sending info to the backend, login to either landlord or dashboard. If failed show an error message.
     try {
       const res = await axios.post('/api/signup', signupInformation)
       if (res.status === 201) {

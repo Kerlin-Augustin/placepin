@@ -15,7 +15,6 @@ interface DecodedAccessToken {
 
 const LandlordDashboard = () => {
 
-  
   const { accessToken } = useAuth()
 
   if(!accessToken){
@@ -23,7 +22,7 @@ const LandlordDashboard = () => {
   }
 
   // This is authPayload for a user
-  const user = jwtDecode<DecodedAccessToken>(accessToken)
+  const user = jwtDecode<DecodedAccessToken>(accessToken);
 
   return (
     <div className={styles.landlordDashboardContainer}>
