@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+// This is the shape of the landlord database object
+
 const landlordSchema = new mongoose.Schema({
   accountType: String,
   address: String,

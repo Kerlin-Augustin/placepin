@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+// This is the shape of the tenant database object
+
 const tenantSchema = new mongoose.Schema({
   accountType: String,
   address: String,

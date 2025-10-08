@@ -9,7 +9,7 @@ if (!process.env.MONGO_URI) {
 
 const Mongo_URI = process.env.MONGO_URI
 
-// Setup Mongoose
+// Setup Mongoose. This connects to the mongodb database
 
 export async function connectToDB() {
   try {

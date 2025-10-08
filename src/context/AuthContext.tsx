@@ -21,10 +21,12 @@ export const AuthProvider = ({
   children: ReactNode
 }) => {
 
+  // State managemnet for login/logout info
   const [email, setEmail] = useState<string | null>(null);
   const [accessToken, setAccessToken] = useState<string | null>(() => localStorage.getItem('accessToken'));
   const [username, setUsername] = useState<string | null>(null);
 
+  // When logging in set the accessToken to localStorage to pass Private Routes
   const login = (accessToken: string, email: string, username: string) => {
     setAccessToken(accessToken)
     setEmail(email)
@@ -32,6 +34,7 @@ export const AuthProvider = ({
     localStorage.setItem('accessToken', accessToken);
   }
 
+  // When logging out removing the access token from local storage
   const logout = () => {
     setAccessToken(null)
     setEmail(null)
@@ -40,6 +43,7 @@ export const AuthProvider = ({
     localStorage.removeItem('accessToken');
   }
 
+  // Part of context hook to all quick access to data
   return (
     <AuthContext.Provider value={{ accessToken, email, username, login, logout }}>
       {children}
@@ -47,6 +51,7 @@ export const AuthProvider = ({
   )
 }
 
+// Custom hook that allows the use of the data from the provider
 export const useAuth = () => {
   const context = useContext(AuthContext)
   if (!context) {
