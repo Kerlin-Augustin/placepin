@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "nodemon --watch server --ext ts --exec 'TSX_TSCONFIG=tsconfig.json tsx backend/server.ts'",
+    "server": "nodemon --watch backend --ext ts,json --exec 'TSX_TSCONFIG=tsconfig.json tsx backend/server.ts'",
     "test": "vitest"
   },
   "dependencies": {
