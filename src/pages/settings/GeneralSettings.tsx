@@ -1,4 +1,5 @@
 import styles from './generalSetting.module.css';
+import ProfileImage from './ProfileImage';
 
 const GeneralSettings = () => {
   return (
@@ -12,7 +13,7 @@ const GeneralSettings = () => {
           <p>Bank Settings</p>
         </div>
         <div className={styles.mainContent}>
-          <p>Contents</p>
+          <ProfileImage />
         </div>
       </div>
     </div>
