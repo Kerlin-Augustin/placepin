@@ -1,5 +1,5 @@
 import styles from './generalSetting.module.css';
-import ProfileImage from './ProfileImage';
+import ProfileImage from './basicInfomation/ProfileImage';
 
 const GeneralSettings = () => {
   return (
