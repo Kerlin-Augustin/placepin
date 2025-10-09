@@ -1,0 +1,39 @@
+.formContainer {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  align-items: center;
+}
+
+.inputFields {
+  height: 2.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 32px;
+}
+
+.button {
+  width: 10%;
+  height: 2.5em;
+  background-image: linear-gradient(135deg, #00bfa5 0%, #4dd0e1 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

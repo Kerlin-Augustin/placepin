@@ -1,7 +1,7 @@
 import styles from './signupPage.module.css';
 import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 import { LANDLORD_ROUTES } from '../../../routes/landlordRoutes'; 
 import { TENANT_ROUTE } from '../../../routes/tenantRoutes';
@@ -19,7 +19,7 @@ const SignupPage = () => {
   const [promo, setPromo] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
 
-  const handleCreateAccount = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleCreateAccount = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     // Make sure the password is at least 8 chars long
