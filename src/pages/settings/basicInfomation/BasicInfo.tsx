@@ -1,7 +1,9 @@
+import ProfileImage from "./ProfileImage";
+
 const BasicInfo = () => {
   return (
     <>
-    Basic Info
+      <ProfileImage />
     </>
   )
 }
