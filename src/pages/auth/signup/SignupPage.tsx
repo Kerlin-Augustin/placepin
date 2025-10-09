@@ -183,7 +183,7 @@ const SignupPage = () => {
             Phone Number
           </label>
           <input
-            type="number"
+            type="tel"
             className={styles.inputFields}
             onChange={(e) => setPhoneNumber(e.target.value.toLowerCase().trim())}
             id='phoneNumber'

@@ -1,7 +1,41 @@
-import type { FormEvent } from "react";
+import { type FormEvent, useEffect, useState } from "react";
 import styles from './basicInfoForm.module.css';
+import axios from 'axios';
+import { useAuth } from "../../../context/AuthContext";
+import { jwtDecode } from "jwt-decode";
+import { type DecodedAccessToken } from "../../dashboard/landlords/LandlordDashboard";
+import { Navigate } from "react-router-dom";
 
 const BasicInfoForm = () => {
+
+  const [fullName, setFullName] = useState('');
+  const [pnoneNumber, setPhoneNumber] = useState(0);
+  const [gender, setGender] = useState('');
+  const [DoB, setDoB] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { accessToken } = useAuth()
+
+  if (!accessToken) {
+    return <Navigate to="/login" replace />;
+  }
+
+  const decodedToken = jwtDecode<DecodedAccessToken>(accessToken);
+  const userID = decodedToken.userID;
+
+  useEffect(() => {
+    const fetchUserID = async () => {
+      try {
+        const res = await axios.get(`/api/landlordsetting/${userID}`)
+        console.log(res.data)
+      } catch (err) {
+        console.error(err)
+      }
+    }
+
+    fetchUserID()
+  }, [])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -31,7 +65,7 @@ const BasicInfoForm = () => {
             </label>
             <input
               className={styles.inputFields}
-              type='text'
+              type='tel'
               id="phone"
             />
           </div>
@@ -55,7 +89,7 @@ const BasicInfoForm = () => {
             </label>
             <input
               className={styles.inputFields}
-              type='text'
+              type='date'
               id="DoB"
             />
           </div>
@@ -85,7 +119,7 @@ const BasicInfoForm = () => {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-        <button className={styles.button}>Save</button>
+          <button className={styles.button}>Save</button>
         </div>
       </form>
     </div>
