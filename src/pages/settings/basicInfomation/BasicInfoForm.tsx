@@ -13,7 +13,7 @@ const BasicInfoForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
 
-  const { accessToken } = useAuth()
+  const { accessToken } = useAuth();
 
   if (!accessToken) {
     return <Navigate to="/login" replace />;
@@ -84,7 +84,7 @@ const BasicInfoForm = () => {
               className={styles.inputFields}
               id="gender"
               value={gender}
-              onChange={(e) => { setGender(e.target.value) }}
+              onChange={(e) => setGender(e.target.value)}
             >
               <option value="" disabled>Select gender</option>
               <option value="male">Male</option>
