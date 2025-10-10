@@ -60,6 +60,10 @@
   overflow-y: auto;
 }
 
+.activeTab {
+  background: #f5f0eb
+}
+
 /* Responsive: stack on smaller screens */
 @media (max-width: 900px) {
   .innerContainer {
