@@ -11,7 +11,7 @@ const BasicInfoForm = () => {
   const [gender, setGender] = useState('');
   const [DoB, setDoB] = useState('');
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
   const { accessToken } = useAuth()
 
@@ -28,6 +28,7 @@ const BasicInfoForm = () => {
         setFullName(landlord.fullName ?? '');
         setPhoneNumber(landlord.phoneNumber ?? '');
         setUsername(landlord.username ?? '');
+        setEmail(landlord.email ?? '');
 
       } catch (err: any) {
         console.error(err.response.data.message)
@@ -120,14 +121,16 @@ const BasicInfoForm = () => {
           </div>
           <div className={styles.formRow}>
             <label
-              htmlFor="password"
+              htmlFor="email"
             >
-              Password
+              Email
             </label>
             <input
               className={styles.inputFields}
-              type='text'
-              id="password"
+              type='email'
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
         </div>
