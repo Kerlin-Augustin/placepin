@@ -23,7 +23,6 @@ const BasicInfoForm = () => {
     const fetchUserID = async () => {
       try {
         const res = await axios.get(`/api/landlordsetting/${accessToken}`)
-        console.log(res.data)
         const { landlord } = res.data
         setFullName(landlord.fullName ?? '');
         setPhoneNumber(landlord.phoneNumber ?? '');
