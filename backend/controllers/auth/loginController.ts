@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { TenantModel } from '../../database/models/Tenant.model';
 import { LandlordModel } from '../../database/models/Landlord.model';
 import bcrypt from 'bcrypt';

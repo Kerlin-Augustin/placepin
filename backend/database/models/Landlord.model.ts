@@ -8,6 +8,7 @@ const landlordSchema = new mongoose.Schema({
   age: Number,
   createdAt: { type: Date, default: Date.now },
   email: { type: String, required: true, unique: true, lowercase: true },
+  fullName: String,
   hasAcceptedDisclaimer: Boolean,
   password: { type: String, required: true },
   phoneNumber: Number,

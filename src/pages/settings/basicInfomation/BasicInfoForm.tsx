@@ -2,14 +2,12 @@ import { type FormEvent, useEffect, useState } from "react";
 import styles from './basicInfoForm.module.css';
 import axios from 'axios';
 import { useAuth } from "../../../context/AuthContext";
-import { jwtDecode } from "jwt-decode";
-import { type DecodedAccessToken } from "../../dashboard/landlords/LandlordDashboard";
 import { Navigate } from "react-router-dom";
 
 const BasicInfoForm = () => {
 
   const [fullName, setFullName] = useState('');
-  const [pnoneNumber, setPhoneNumber] = useState(0);
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [gender, setGender] = useState('');
   const [DoB, setDoB] = useState('');
   const [username, setUsername] = useState('');
@@ -21,16 +19,18 @@ const BasicInfoForm = () => {
     return <Navigate to="/login" replace />;
   }
 
-  const decodedToken = jwtDecode<DecodedAccessToken>(accessToken);
-  const userID = decodedToken.userID;
-
   useEffect(() => {
     const fetchUserID = async () => {
       try {
-        const res = await axios.get(`/api/landlordsetting/${userID}`)
+        const res = await axios.get(`/api/landlordsetting/${accessToken}`)
         console.log(res.data)
-      } catch (err) {
-        console.error(err)
+        const { landlord } = res.data
+        setFullName(landlord.fullName ?? '');
+        setPhoneNumber(landlord.phoneNumber ?? '');
+        setUsername(landlord.username ?? '');
+
+      } catch (err: any) {
+        console.error(err.response.data.message)
       }
     }
 
@@ -55,6 +55,8 @@ const BasicInfoForm = () => {
               className={styles.inputFields}
               type='text'
               id='name'
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
             />
           </div>
           <div className={styles.formRow}>
@@ -67,6 +69,8 @@ const BasicInfoForm = () => {
               className={styles.inputFields}
               type='tel'
               id="phone"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
           </div>
           <div className={styles.formRow}>
@@ -75,11 +79,16 @@ const BasicInfoForm = () => {
             >
               Gender
             </label>
-            <input
+            <select
               className={styles.inputFields}
-              type='text'
               id="gender"
-            />
+              value={gender}
+              onChange={(e) => { setGender(e.target.value) }}
+            >
+              <option value="" disabled>Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
           </div>
           <div className={styles.formRow}>
             <label
@@ -91,6 +100,8 @@ const BasicInfoForm = () => {
               className={styles.inputFields}
               type='date'
               id="DoB"
+              value={DoB}
+              onChange={(e) => setDoB(e.target.value)}
             />
           </div>
           <div className={styles.formRow}>
@@ -103,6 +114,8 @@ const BasicInfoForm = () => {
               className={styles.inputFields}
               type='text'
               id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className={styles.formRow}>

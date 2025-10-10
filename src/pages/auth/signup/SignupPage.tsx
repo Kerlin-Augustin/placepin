@@ -144,7 +144,7 @@ const SignupPage = () => {
             id="accountType"
             required
           >
-            <option value="">Select one</option>
+            <option value="" disabled>Select one</option>
             <option value="tenant">Tenant</option>
             <option value="landlord">Landlord</option>
           </select>
