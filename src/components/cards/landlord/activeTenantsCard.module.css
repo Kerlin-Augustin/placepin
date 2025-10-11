@@ -13,3 +13,9 @@
   25% { transform: translateX(-3px); }
   75% { transform: translateX(3px); }
 }
+
+.tenants {
+  font-size: 32px;
+  font-weight: 900;
+  display: inline-block;
+}

@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noTenants {
+  font-size: 32px;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.noTenants:hover {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.meter {
+  height: 2rem;
+  width: 100%;
+}
+
+.bad::-webkit-meter-bar,
+.bad::-moz-meter-bar {
+  background: #f5f0eb;
+}
+
+.bad::-webkit-meter-optimum-value,
+.bad::-webkit-meter-suboptimum-value,
+.bad::-webkit-meter-even-less-good-value {
+  background: red;
+}
+
+.warn::-webkit-meter-bar,
+.warn::-moz-meter-bar {
+  background: #f5f0eb;
+}
+
+.warn::-webkit-meter-optimum-value,
+.warn::-webkit-meter-suboptimum-value,
+.warn::-webkit-meter-even-less-good-value {
+  background: yellow;
+}
+
+.good::-webkit-meter-bar,
+.good::-moz-meter-bar {
+  background: #f5f0eb;
+}
+
+.good::-webkit-meter-optimum-value,
+.good::-webkit-meter-suboptimum-value,
+.good::-webkit-meter-even-less-good-value {
+  background: green;
+}

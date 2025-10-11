@@ -14,7 +14,7 @@ const ActiveTenantsCard = ({
     <>
       {!numberOfTenants
         ? <span className={styles.noTenants}>None</span>
-        : <p>{`${tenantsWithSubscription}/${numberOfTenants}`}</p>
+        : <p className={styles.tenants}>{`${tenantsWithSubscription}/${numberOfTenants}`}</p>
       }
     </>
   )

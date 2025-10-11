@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 import LandlordSidebar from "../../../components/sidebars/landord/LandlordSidebar";
 import LandlordHeader from "../../../components/headers/landlord/LandlordHeader";
@@ -18,7 +18,7 @@ const LandlordDashboard = () => {
   const { accessToken } = useAuth()
 
   if(!accessToken){
-    return 
+    return <Navigate to="/login" replace />;
   }
 
   // This is authPayload for a user

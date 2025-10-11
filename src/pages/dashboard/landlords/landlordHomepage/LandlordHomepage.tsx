@@ -2,6 +2,7 @@ import styles from './landlordHomepage.module.css';
 import ActiveTenantsCard from '../../../../components/cards/landlord/ActiveTenantsCard';
 import PerkAdoptionCard from '../../../../components/cards/landlord/PerkAdoptionCard';
 import StatsKPICard from '../../../../components/cards/landlord/StatsKPICard';
+import RetentionHealthMeter from '../../../../components/cards/landlord/RetentionHealthMeter';
 
 const LandlordHomepage = () => {
 
@@ -10,7 +11,11 @@ const LandlordHomepage = () => {
   }
 
   const handleNudge = () => {
-    console.log("Make a model to nudge a tenant that hasn't used a perk in awhile!")
+    console.log("Make a modal to nudge a tenant that hasn't used a perk in awhile!")
+  }
+
+  const handleGift = () => {
+    console.log('Make a modal to gift a perk to a tenant!')
   }
 
   return (
@@ -24,7 +29,7 @@ const LandlordHomepage = () => {
             handleClick={handleInvite}
           >
             <ActiveTenantsCard
-              numberOfTenants={0}
+              numberOfTenants={1}
               tenantsWithSubscription={0}
             />
           </StatsKPICard>
@@ -38,6 +43,13 @@ const LandlordHomepage = () => {
               tenantsUsingPerksPercentage={0}
               mostUsedPerk={''}
             />
+          </StatsKPICard>
+          <StatsKPICard
+            title={'Retention Health Meter'}
+            ctaText={'Tip: Help keep a tenant longer with a perk!'}
+            handleClick={handleGift}
+          >
+            <RetentionHealthMeter numberOfTenants={0} retentionHealth='High' value={80}/>
           </StatsKPICard>
         </div>
       </div>
